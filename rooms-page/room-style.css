@@ -1,0 +1,608 @@
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: mrseav;
+    font-size: 18px;
+    src: url('../asset/font/MRSEAV~9.TTF');
+}
+
+@font-face {
+    font-family: lemonMilk;
+    font-size: 15px;
+    src: url('../asset/font/LEMONMILK-Light.otf');
+}
+
+@font-face {
+    font-family: baskerville;
+    font-size: 15px;
+    src: url('../asset/font/baskervville.regular.ttf');
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 1rem;
+    padding-right: 2rem;
+    background-color: white;
+    position: fixed;
+    width: 97vw;
+    z-index: 1;
+    transition: all 0.6s linear;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5vw;
+    background-color: white;
+}
+
+.right-nav a {
+    text-decoration: none;
+    font-family: lemonMilk;
+    color: black;
+    margin-inline: 0.5rem;
+    transition: all 0.25s linear;
+}
+
+.right-nav a:hover {
+    color: darksalmon;
+}
+
+.logo img {
+    max-width: 3rem;
+}
+
+.small-nav {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    padding-right: 1rem;
+}
+
+.small-nav div {
+    width: 2rem;
+    height: 0.2rem;
+    background-color: black;
+    border-radius: 0.1rem;
+    transition: all 0.5s;
+}
+
+.small-nav input {
+    position: absolute;
+    width: 2rem;
+    height: 1.5rem;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.small-nav input:checked ~ div:nth-child(2) {
+    opacity: 0;
+}
+
+.small-nav input:checked ~ div:nth-child(3) {
+    width: 1.5rem;
+}
+
+.small-nav input:checked ~ div:nth-child(4) {
+    opacity: 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.rm-title p {
+    letter-spacing: 0.5rem;
+    font-size: 45px;
+    transition: all 1s;
+}
+
+.room-card {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.room-card:not(:first-child) {
+    padding-top: 60px;
+}
+
+.room-card:last-child {
+    padding-bottom: 5rem;
+}
+
+.in-card {
+    display: flex;    
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    padding-inline: 10vw;
+    position: relative;
+}
+
+.pic {
+    display: none;
+    opacity: 0%;
+    transition: 600ms;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+.in-card .pic img{
+    width: 500px;
+    transition: all 1s;
+}
+
+.txt {
+    height:25vw;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    font-family: baskerville;
+    gap: 25px;
+}
+
+.detail {
+    padding-right: 5vw;
+}
+
+.detail p {
+    margin: 5px;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.title .price {
+    font-family: lato;
+    letter-spacing: 0.25px;  
+}
+
+.title p {
+    font-family: baskerville;   
+    font-weight: 450; 
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.btn button {
+    cursor: pointer;
+    background: transparent;
+    color: darksalmon;
+    font-family: lemonMilk;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 1rem 1.5rem;
+    transition: ease-in-out 0.35s;
+    border: 2.25px solid darksalmon;
+  }
+  
+.btn button:hover {
+    background-color: darksalmon;
+    color: white;
+}
+
+.card {
+    gap: 0px;
+}
+
+.mid-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.mid-comp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5vw;
+    min-width: 75vw;
+    min-height: 60vh;
+    gap: 20px;
+}
+
+.fp-title a, .cp-title a, .gp-title a, .sp-title a {
+    text-decoration: none;
+    font-family: baskerville;
+    font-weight: 450;
+    font-size: 3vw;
+    margin: 0;
+}
+
+.fp-desc p, .cp-desc p, .gp-desc p, .sp-desc p{
+    margin-top: 0;
+    font-family: baskerville;
+}
+
+.fp-desc, .cp-desc, .gp-desc, .sp-desc {
+    padding-inline: 10vw;
+}
+
+.all-fp, .all-cp, .all-gp, .all-sp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.all-fp img, .all-gp img, .all-sp img, .all-cp img {
+    width: 55vw;
+}
+
+.show {
+    transform: translateY(125px);
+    transition: all 0.75s linear;
+    opacity: 0;
+}
+
+.on {
+    transform: translateY(0px);
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F0;
+    width: 100vw;
+    height: 35vh;
+}
+
+.in-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    transition: all 1s linear;
+}
+
+.divider {
+    margin: 2rem;
+    width: 75vw;
+    border: 1px solid black;
+    opacity: 0.2;
+}
+
+.address {
+    margin-right: 8vw;
+}
+
+.social {
+    margin-left: 8vw;
+}
+
+.address p {
+    font-family: baskerville;
+}
+
+.cpyr {
+    font-family: mrseav;
+}
+
+.in-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.in-social img {
+    max-width: 1.5rem;
+}
+
+.in-social a {
+    transition: all 0.25s linear;
+}
+
+.in-social a:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .detail {
+        padding-right: 3vw;
+    }
+
+    .detail p {
+        font-size: 14px;
+    }
+
+    .btn button {
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 985px) {
+    .btn button {
+        padding: 0.35rem 0.95rem;
+    }
+
+    .in-card .pic img {
+        width: 400px;
+    }
+
+    .room-card {
+        height: 350px;
+    }
+
+    .room-card:not(:first-child) {
+        padding-top: 30px;
+    }
+
+    .detail p {
+        font-size: 1.5vw;
+    }
+
+    .name p {
+        font-size: 3vw;
+    }
+
+    .txt {
+        gap: 2vw;
+    }
+
+    .rm-title p {
+        letter-spacing: 0.25rem;
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .room-card {
+        height: 300px;
+    }
+
+    .in-card .pic img {
+        width: 350px;
+    }
+
+    .rm-title p {
+        letter-spacing: 0.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .small-nav {
+        display: flex;
+    }
+
+    .right-nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40vw;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        z-index: -2;
+        transform: translateX(100%);
+        transition: all 1s;
+        margin-right: 25px;
+    }
+
+    .nav-in {
+        transform: translateX(0);
+    }
+
+    .in-social img {
+        max-width: 1.25rem;
+    }
+
+    .address p {
+        font-size: 13.5px;
+    }
+
+    .cpyr {
+        font-size: 13.5px;
+    }
+
+    .data {
+        gap: 25px;
+    }
+
+    .txt {
+        padding-left: 20px;
+    }
+
+    .in-card .pic img {
+        width: 300px;
+    }
+
+    .btn button {
+        font-size: 12.5px;
+        padding: 0.3rem 0.75rem;
+    }
+
+    .rm-title p {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .fp-desc p, .cp-desc p, .gp-desc p, .sp-desc p {
+        font-size: 13.5px;
+    }
+
+    .address {
+        margin-right: 4vw;
+    }
+
+    .social {
+        margin-left: 4vw;
+    }
+
+    .in-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .room-card:last-child {
+        padding-bottom: 10rem;
+    }
+
+    .room-card {
+        padding: 175px 0;
+    }
+
+    .room-card:first-child {
+        padding-top: 100px;
+    }
+
+    .in-card .pic img {
+        width: 375px;
+    }
+
+    .txt {
+        padding: 0 10vw;
+    }
+
+    .price {
+        font-size: 13.5px;
+        letter-spacing: 0.5px;
+    }
+
+    .detail p {
+        font-size: 11.5px;
+    }
+}  
+
+@media (max-width: 560px) {
+    .address p {
+        font-size: 10px;
+    }
+
+    .cpyr {
+        font-size: 10px;
+    }
+
+    .data {
+        gap: 12.5px;
+    }
+
+    .in-social img {
+        max-width: 1rem;
+    }
+    
+    .in-social {
+        gap: 10px;
+    }
+
+    .divider {
+        margin: 1rem;
+    }
+
+    footer {
+        height: 25vh;
+    }
+    
+    .in-card .pic img {
+        width: 325px;
+    }
+
+    .detail p {
+        font-size: 11.5px;
+    }
+
+    .name p {
+        font-size: 5vw;
+    }
+
+    .txt {
+        padding: 0 7vw;
+    }
+
+    .rm-title p {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .room-card:first-child {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .data {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address p {
+        font-size: 12.5px;
+    }
+
+    .cpyr {
+        font-size: 12.5px;
+    }
+
+    .in-social img {
+        max-width: 1.25rem;
+    }
+    
+    .in-social {
+        gap: 12.5px;
+    }
+
+    footer {
+        padding-bottom: 1rem;
+    }   
+
+    .txt {
+        padding: 0 2.5vw;
+    }
+}

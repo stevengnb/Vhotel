@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link rel="stylesheet" href="./room-style.css">
+    <script src="./room-script.js"></script>
+</head>
+<body>
+    <div class="navbar" id="idNav">
+        <div class="logo">
+            <a href="../home.html">
+                <img src="../asset/logo.png" alt="">
+            </a>
+        </div>
+        <div class="right-nav" id="idRightNav">
+            <a href="../home.html">Home</a>
+            <a href="../rooms-page/rooms.html">Rooms</a>
+            <a href="../reservation-page/reservation.html">Reservation</a>
+            <a href="../facilities-page/facilities.html">Facilities</a>
+            <a href="../about-page/about.html">About Us</a>
+        </div>
+        <div class="small-nav">
+            <input type="checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="top">
+        <div class="rm-title">
+            <p>
+                ROOMS
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="room-card">
+            <div class="in-card" id="in-1"> 
+                <div class="pic active">
+                    <img src="../asset/rooms/room 1/ss1.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="../asset/rooms/room 1/ss2.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="../asset/rooms/room 1/ss3.jpeg" alt="">
+                </div>
+                <div class="txt">
+                    <div class="title">
+                        <div class="name">
+                            <p>Sweet Suite</p>
+                        </div>
+                        <div class="price">
+                            <b>RP999.000</b> per night
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>
+                            Our cozy suite provides a comfortable retreat for solo travelers or couples. Featuring a comfortable bed and tasteful decorations, it serves as an ideal accommodation for your stay at our hotel.
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <button onclick="toSweetSuite()">
+                            DETAILS 
+                        </button>
+                        <button onclick="toReservation()">
+                            BOOK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="in-card" id="in-2">
+                <div class="pic active">
+                    <img src="../asset/rooms/room 2/dt1.jpeg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="../asset/rooms/room 2/dt3.jpeg" alt="">
+                </div>
+                <div class="txt">
+                    <div class="title">
+                        <div class="name">
+                            <p>Double Trouble</p>
+                        </div>
+                        <div class="price">
+                            <b>RP2.499.000</b> per night
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>
+                            Double trouble is a perfect room for families or group of friends seeking spacious and calming accommodation. With two cozy beds and convenient amenities, the guests can unwind and relax in this comfortable place.
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <button onclick="toDoubleTrouble()">
+                            DETAILS 
+                        </button> 
+                        <button onclick="toReservation()">
+                            BOOK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="in-card show" id="in-3">
+                <div class="pic active">
+                    <img src="../asset/rooms/room 3/ls2.jpeg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="../asset/rooms/room 3/ls1.png" alt="">
+                </div>
+                <div class="txt">
+                    <div class="title">
+                        <div class="name">
+                            <p>Luxurious Suite</p>
+                        </div>
+                        <div class="price">
+                            <b>RP7.999.000</b> per night
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>
+                            This luxurious suite is the perfect option for you who want to enjoy the holiday to the fullest. This room has three elegantly appointed bedrooms, each fitted with useful features to ensure a peaceful stay. 
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <button onclick="toLuxuriousSuite()">
+                            DETAILS 
+                        </button>
+                        <button onclick="toReservation()">
+                            BOOK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="in-footer">
+            <div class="data">
+                <div class="address">
+                    <p>
+                        Sutera Nature Street, S1807 001/003, Tangerang, Banten <br>
+                        Email: info@vhotel.com <br>
+                        Phone: +62 1234 5678
+                    </p>
+                </div>
+                <div class="social">
+                    <div class="in-social">
+                        <div><a href="http://facebook.com"><img src="../asset/fb-logo.png" alt=""></a></div>
+                        <div><a href="http://twitter.com"><img src="../asset/twt-logo.png" alt=""></a></div>
+                        <div><a href="http://instagram.com"><img src="../asset/ig-logo.png" alt=""></a></div>
+                        <div><a href="http://youtube.com"><img src="../asset/yt-logo.png" alt=""></a></div>
+                      </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="cpyr">
+                Made by Steven
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

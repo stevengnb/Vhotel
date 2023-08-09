@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="./reservation.css">
+    <script src="./reservation.js"></script>
+</head>
+<body>
+    <div class="navbar" id="idNav">
+        <div class="logo">
+            <a href="../home.html">
+                <img src="../asset/logo.png" alt="">
+            </a>
+        </div>
+        <div class="right-nav" id="idRightNav">
+            <a href="../home.html">Home</a>
+            <a href="../rooms-page/rooms.html">Rooms</a>
+            <a href="../reservation-page/reservation.html">Reservation</a>
+            <a href="../facilities-page/facilities.html">Facilities</a>
+            <a href="../about-page/about.html">About Us</a>
+        </div>
+        <div class="small-nav">
+            <input type="checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="top">
+        <div class="top-wrapper">
+            <img src="../asset/reservation/reserve.jpeg" alt="">
+            <div class="txt">
+                <p>RESERVATION</p>
+            </div>
+        </div>
+    </div>
+    <div class="top-cover"></div>
+    <div class=all-form>
+        <div class="allform-wrapper">
+            <div class="title show">
+                <p>We can't wait to host you!</p>
+            </div>
+            <div class="content show">
+                <form id="reserve-form" onsubmit="return validateAll()">
+                    <div class="name-form">
+                        <label for="name"><span class="text">Name</span><span class="need">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name.." onfocusout="nameValidate()">
+                        <p class="error">Please enter your name (minimum 3 characters).</p>
+                    </div>
+                    <br>
+                    <div class="email-form">
+                        <label for="email"><span class="text">Email</span><span class="need">*</span></label>
+                        <input type="text" name="email" id="email" placeholder="Enter your email.." onfocusout="emailValidate()">
+                        <p class="error">Please enter a valid email address.</p>
+                    </div>
+                    <br>
+                    <div class="checkin-form">
+                        <label for="checkin"><span class="text">Check In Date</span><span class="need">*</span></label>
+                        <input type="date" name="checkin" id="checkin" onfocusout="checkInValidate()">
+                        <p class="error">Check-in date cannot be today or any date before today.</p>
+                    </div>
+                    <br>
+                    <div class="checkout-form">
+                        <label for="checkout"><span class="text">Check Out Date</span><span class="need">*</span></label>
+                        <input type="date" name="checkout" id="checkout" onfocusout="checkOutValidate()">
+                        <p class="error">Check-out date must be after the check-in date.</p>
+                    </div>
+                    <br>
+                    <div class="type-of-room-form">
+                        <label for="tor"><span class="text">Type of Room</span><span class="need">*</span></label>
+                        <select id="tor" name="tor" onfocusout="checkTypeOfRoom()">
+                            <option value="none">(none)</option>
+                            <option value="ss">Sweet Suite</option>
+                            <option value="dt">Double Trouble</option>
+                            <option value="ls">Luxurious Suite</option>
+                        </select>
+                        <p class="error">Please select a room type.</p>
+                    </div>
+                    <br><br>
+                    <div class="btn">
+                        <button type= "submit" id="submit-btn">
+                            RESERVE
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="in-footer">
+            <div class="data">
+                <div class="address">
+                    <p>
+                        Sutera Nature Street, S1807 001/003, Tangerang, Banten <br>
+                        Email: info@vhotel.com <br>
+                        Phone: +62 1234 5678
+                    </p>
+                </div>
+                <div class="social">
+                    <div class="in-social">
+                        <div><a href="http://facebook.com"><img src="../asset/fb-logo.png" alt=""></a></div>
+                        <div><a href="http://twitter.com"><img src="../asset/twt-logo.png" alt=""></a></div>
+                        <div><a href="http://instagram.com"><img src="../asset/ig-logo.png" alt=""></a></div>
+                        <div><a href="http://youtube.com"><img src="../asset/yt-logo.png" alt=""></a></div>
+                      </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="cpyr">
+                Made by Steven
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
